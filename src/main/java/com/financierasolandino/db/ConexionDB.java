@@ -17,16 +17,22 @@ public class ConexionDB {
     static {
         try (InputStream input = ConexionDB.class.getClassLoader().getResourceAsStream(ARCHIVO_PROPIEDADES)) {
             if (input == null) {
-                throw new RuntimeException("No se encontró el archivo de propiedades: " + ARCHIVO_PROPIEDADES);
+                System.err.println("⚠️  No se encontró el archivo de configuración: '" + ARCHIVO_PROPIEDADES + "'");
+                System.err.println("💡  Asegúrate de haber copiado y renombrado 'config.properties.ejemplo' como 'config.properties' en la carpeta 'resources'.");
+                System.exit(1);  // Termina la ejecución para evitar stack trace confuso
             }
             propiedades.load(input);
         } catch (IOException e) {
-            throw new RuntimeException("Error al cargar el archivo de propiedades: " + ARCHIVO_PROPIEDADES, e);
+            System.err.println("❌ Error al cargar el archivo de propiedades: " + ARCHIVO_PROPIEDADES);
+            e.printStackTrace();
+            System.exit(1);
         }
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException("No se encontró el driver JDBC de MySQL", e);
+            System.err.println("❌ No se encontró el driver JDBC de MySQL");
+            e.printStackTrace();
+            System.exit(1);
         }
     }
 
