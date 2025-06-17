@@ -1,0 +1,8 @@
+# Configuración conexión de la base de datos
+
+# Renombrar este archivo "config.properties.ejemplo" a "config.properties" y completar los valores
+# Por favor, edita los valores de db.usuario y db.contrasena con tus credenciales reales de MySQL.
+
+db.url=jdbc:mysql://localhost:3306/sistema_financiero?useSSL=false&serverTimezone=UTC
+db.usuario=TU_USUARIO_AQUI
+db.contrasena=TU_CONTRASENA_AQUI

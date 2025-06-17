@@ -1,0 +1,30 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# 🔧 IntelliJ IDEA
+.idea/
+
+# ⚙️ Maven
+target/
+
+# 🧪 Logs y temporales
+*.log
+*.tmp
+*.swp
+*.bak
+*.class
+
+# 💾 Archivos de configuración locales
+src/main/resources/config.properties
+
+# 📦 Directorios personalizados
+exportacion/
+
+# 🧪 Archivos de pruebas temporales o resultados
+*.out
+*.test
+
+# 💻 Sistema operativo (macOS, Windows, Linux)
+.DS_Store
+Thumbs.db
