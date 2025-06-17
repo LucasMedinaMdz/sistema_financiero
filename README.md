@@ -22,15 +22,14 @@ La configuración de la conexión a la base de datos se realiza mediante un arch
 2. Verás un archivo llamado:  
    `config.properties.ejemplo`
 
-3. **Haz una copia** de este archivo y **renómbralo** a:  
-   `config.properties`
+3. **Renombra** este archivo a: **"config.properties"**
 
    Para hacerlo en IntelliJ IDEA:
-   - Haz clic derecho sobre `config.properties.ejemplo` → **Copy**  
-   - Haz clic derecho sobre la carpeta `resources` → **Paste**  
-   - Renombra el archivo recién pegado a `config.properties` (clic derecho → Refactor → Rename o presiona `Shift + F6`)
+   - Haz clic derecho sobre `config.properties.ejemplo` → **Refactor** → **Rename** 
+   - O presiona **Shift + F6** y cambiar el nombre
+   - Destildar las opciones *Search for references* y *Search comments and strings* → **Refactor**
 
-4. Abre `config.properties` y completa tus datos de conexión:
+5. Abre `config.properties` y completa tus datos de conexión:
 
    ```properties
    db.url=jdbc:mysql://localhost:3306/sistema_financiero?useSSL=false&serverTimezone=UTC
@@ -49,9 +48,9 @@ El archivo SQL se encuentra en el siguiente link: https://drive.google.com/file/
 
 ### 🧰 Cómo importarlo
 
-1. Abre **MySQL Workbench** o cualquier herramienta de administración de bases de datos que prefieras.
-2. Conéctate a tu servidor local (por ejemplo, `localhost`).
-3. Abre el archivo `sistema_financiero.sql`.
+1. Abre **MySQL Workbench**.
+2. Conéctate a tu servidor.
+3. En **MySQL Workbench** → Haga clic en File → Open SQL Script → Seleccione el archivo **sistema_financiero.sql**
 4. Ejecuta el script completo. Esto:
    - Creará la base de datos `sistema_financiero`
    - Generará todas las tablas necesarias
@@ -71,8 +70,7 @@ src/
      ├── java/
      │    └── ConexionDB.java
      └── resources/
-          ├── config.properties.ejemplo
-          └── config.properties  ← Ignorado por Git
+          └── config.properties
 ```
 
 ---
